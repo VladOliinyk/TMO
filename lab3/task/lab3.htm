@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0065)http://www.exponenta.ru/educat/systemat/gomboev/labsmo/smo1_n.asp -->
+<HTML><HEAD><TITLE>Системы массового обслуживания. Лабораторные работы. Одноканальная система массового обслуживания (СМО) с ожиданием</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META 
+content="Лабораторные работы по курсу 'Системы массового обслуживания' в разделе Методические Разработки образовательного математического сайта Exponenta.ru. Одноканальная система массового обслуживания (СМО) с ожиданием&#13;&#10;" 
+name=Description><LINK href="lab3.files/default2.css" rel=STYLESHEET 
+type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
+<DIV align=center>
+<TABLE border=0 cellPadding=0 cellSpacing=0 height=120 width=740>
+  <TBODY>
+  <TR><!--begin of Top100--><A href="http://top100.rambler.ru/top100/"><IMG 
+    alt="Rambler's Top100" border=0 height=1 src="lab3.files/empty.gif" 
+    width=1></A> <!--end of Top100 code--></TR>
+  <TR>
+    <TD align=middle background=lab3.files/224_1.gif colSpan=2 height=66 
+    vAlign=bottom width=740><A href="http://www.exponenta.ru/default.asp" 
+      title="Образовательный математический сайт">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </A></TD></TR>
+  <TR>
+    <TD align=right background=lab3.files/224_30.gif height=20 vAlign=bottom 
+    width=611>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <A 
+      class=anormal 
+      href="http://www.exponenta.ru/soft/matlab/matlab.asp">Matlab</A> <FONT 
+      color=#6c0036>&nbsp;|&nbsp;</FONT> <A class=anormal 
+      href="http://www.exponenta.ru/soft/Mathcad/Mathcad.asp">Mathcad</A> <FONT 
+      color=#6c0036>&nbsp;|&nbsp;</FONT> <A class=anormal 
+      href="http://www.exponenta.ru/soft/Maple/Maple.asp">Maple</A> <FONT 
+      color=#6c0036>&nbsp;|&nbsp;</FONT> <A class=anormal 
+      href="http://www.exponenta.ru/soft/Mathemat/Mathemat.asp">Mathematica</A> 
+      <FONT color=#6c0036>&nbsp;|&nbsp;</FONT> <A class=anormal 
+      href="http://www.exponenta.ru/soft/Statist/Statist.asp">Statistica</A> 
+      <FONT color=#6c0036>&nbsp;|&nbsp;</FONT> <A class=anormal 
+      href="http://www.exponenta.ru/soft/Others/Others.asp">Другие пакеты</A> 
+</TD>
+    <TD align=left height=20 vAlign=bottom width=129><A 
+      href="http://www.exponenta.ru/search/"><IMG alt="Поиск по сайту" border=0 
+      height=20 src="lab3.files/224_31.gif" width=129></A></TD></TR>
+  <TR>
+    <TD align=middle background=lab3.files/224_21.gif colSpan=2 height=19 
+    vAlign=top width=740><A class=navbar 
+      href="http://www.exponenta.ru/educat/class/class.asp">Internet-класс</A> 
+      <FONT color=white>&nbsp;|&nbsp;</FONT> <A class=navbar 
+      href="http://www.exponenta.ru/educat/class/courses/student/courses.asp">Примеры</A> 
+      <FONT color=white>&nbsp;|&nbsp;</FONT> <A class=navbar 
+      href="http://www.exponenta.ru/educat/systemat/systemat.asp">Методики</A> 
+      <FONT color=white>&nbsp;|&nbsp;</FONT> <A class=navbar 
+      href="http://www.exponenta.ru/educat/referat/referat.asp">Банк задач</A> 
+      <FONT color=white>&nbsp;|&nbsp;</FONT> <A class=navbar 
+      href="http://www.exponenta.ru/forum/forum.asp">Консультации &amp; 
+      Форум</A> <FONT color=white>&nbsp;|&nbsp;</FONT> <A class=navbar 
+      href="http://www.exponenta.ru/educat/free/free.asp">Download</A> <FONT 
+      color=white>&nbsp;|&nbsp;</FONT> <A class=navbar 
+      href="http://www.exponenta.ru/educat/links/links.asp">Ссылки</A> <FONT 
+      color=white>&nbsp;|&nbsp;</FONT> <A class=navbar 
+      href="http://www.exponenta.ru/educat/competit/competit.asp">Конкурсы</A> 
+    </TD></TR>
+  <TR>
+    <TD align=right background=lab3.files/224_22.gif colSpan=2 height=15 
+    vAlign=bottom width=740><A class=anormal 
+      href="http://www.exponenta.ru/journal/" 
+      target=_blank><STRONG>Научно-практический журнал "Exponenta Pro. 
+      Математика в приложениях"</STRONG></A> </TD></TR>
+  <TR>
+    <TD colSpan=2 height=2 width=740></TD></TR></TBODY></TABLE></DIV>
+<DIV align=center>
+<CENTER>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=740>
+  <TBODY>
+  <TR>
+    <TD align=left vAlign=top>&nbsp; 
+      <DIV align=center>
+      <CENTER>
+      <TABLE border=0 cellPadding=5 width="100%">
+        <TBODY>
+        <TR>
+          <TD class=head width="100%"><STRONG>Системы массового обслуживания. 
+            Лабораторные работы<BR>Гомбоев Л.Г.</STRONG></TD></TR>
+        <TR>
+          <TD class=text1 width="100%">
+            <P align=right><A 
+            href="http://www.exponenta.ru/educat/systemat/systemat.asp">Вернуться</A> 
+            на страницу &lt;Методические разработки&gt;</P>
+            <P align=right><A 
+            href="http://www.exponenta.ru/educat/systemat/gomboev/labsmo/lr.asp">В 
+            начало</A></P>
+            <H2 align=left>Одноканальная система массового обслуживания (СМО) с 
+            ожиданием </H2>
+            <P align=left>Рассмотрим одноканальную систему массового 
+            обслуживания (СМО) с ожиданием.<BR>Пусть входящий поток заявок на 
+            обслуживание - простейший поток с интенсивностью<FONT face=Symbol 
+            size=2> l</FONT>. </P>
+            <P align=left>Интенсивность потока обслуживания равна <FONT 
+            face=Symbol size=2>m</FONT>. Длительность обслуживания - случайная 
+            величина, подчиненная показательному закону распределения. Поток 
+            обслуживаний является простейшим пуассоновским потоком событий. 
+            Заявка, поступившая в момент, когда канал занят, становится в 
+            очередь и ожидает обслуживания. Предположим, что СМО не может 
+            вместить более N заявок, т.е. заявки, не попавшие в ожидание, 
+            покидают СМО. Состояния СМО имеют следующую интерпретацию: </P>
+            <P align=left><IMG align=middle src="lab3.files/SMO1_n3.gif"> - 
+            канал свободен; </P>
+            <P align=left><IMG align=middle src="lab3.files/SMO1_n4.gif"> - 
+            канал занят, очереди нет; </P>
+            <P align=left><IMG align=middle src="lab3.files/SMO1_n5.gif"> - 
+            канал занят, одна заявка в очереди; </P>
+            <P 
+            align=left>................................................................. 
+            </P>
+            <P align=left><IMG align=middle src="lab3.files/SMO1_n6.gif"> - 
+            канал занят, n-1 заявка в очереди; </P>
+            <P 
+            align=left>................................................................. 
+            </P>
+            <P align=left><IMG align=middle src="lab3.files/SMO1_n7.gif"> - 
+            канал занят, N-1 заявка в очереди. </P>
+            <P align=left>Стационарный процесс в данной системе будет 
+            описываться следующей системой алгебраических уравнений: </P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n8.gif"> , 
+            n=0, </P>
+            <P align=center>................................... </P>
+            <P align=center>-( <IMG align=middle src="lab3.files/SMO1_n9.gif"> , 
+            0&lt;n&lt;N, </P>
+            <P align=center>................................... </P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n10.gif"> , 
+            n=N, </P>
+            <P align=left>где <IMG align=middle src="lab3.files/SMO1_n11.gif"> ; 
+            </P>
+            <P align=left>n - номер состояния. </P>
+            <P align=left>Система уравнений имеет следующее решение:: </P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n12.gif"> , 
+            </P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n13.gif"> , 
+            если <IMG align=middle src="lab3.files/SMO1_n14.gif"> , n=1, 2, ..., 
+            N, </P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n15.gif"> при 
+            <IMG align=middle src="lab3.files/SMO1_n16.gif"> . </P>
+            <P align=left>Выполнение условия стационарности <FONT face=Symbol 
+            size=2>r</FONT> &lt; 1 не обязательно, поскольку число допускаемых в 
+            СМО заявок контролируется путем введения ограничения на длину 
+            очереди. Определим характеристики одноканальной СМО с ожиданием и 
+            ограниченной длиной очереди, равной (N-1):<BR>1) вероятность отказа 
+            в обслуживании заявки:<BR></P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n18.gif"> ; 
+            </P>
+            <P align=left>2) относительная пропускная способность СМО: </P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n19.gif"> ; 
+            </P>
+            <P align=left>3) абсолютная пропускная способность СМО: </P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n20.gif"> ; 
+            </P>
+            <P align=left>4) среднее число находящихся в СМО заявок: </P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n21.gif"> ; 
+            </P>
+            <P align=left>5) среднее время пребывания заявки в СМО: </P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n22.gif"> ; 
+            </P>
+            <P align=left>6) средняя продолжительность пребывания клиента 
+            (заявки) в очереди: </P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n23.gif"> ; 
+            </P>
+            <P align=left>7) среднее число заявок в очереди (длина очереди): 
+</P>
+            <P align=center><IMG align=middle src="lab3.files/SMO1_n24.gif"> ; 
+            </P>
+            <P align=left><B>Задача 1</B>. Специализированный пост диагностики 
+            представляет собой одноканальную СМО. Число стоянок для автомобилей, 
+            ожидающих проведения диагностики, ограниченно и равно 3. Если все 
+            стоянки заняты, то очередной автомобиль, прибывший на диагностику, в 
+            очередь на обслуживание не становится. Поток автомобилей, 
+            прибывающих на диагностику, распределен по закону Пуассона и имеет 
+            интенсивность <FONT face=Symbol size=2>l</FONT> = 0.85 (автомобиля в 
+            час). Время диагностики автомобиля распределено по показательному 
+            закону и в среднем составляет 1.05 час. Требуется определить 
+            вероятностные характеристики поста диагностики, работающего в 
+            стационарном режиме.<BR><STRONG>Решение</STRONG>:<BR>1) 
+            Интенсивность прибытия автомобилей на обслуживание:<BR></P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>lambda:=0.85;</FONT></B> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n26.gif"> </P>
+            <P align=left>2) Зададим среднее время обслуживания и выразим 
+            интенсивность потока обслуживания автомобилей: </P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>t[sr]:=1.05:mu:=1/t[sr];</FONT></B> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n27.gif"> </P>
+            <P align=left>3) Найдем приведенную интенсивность потока автомобилей 
+            как отношение интенсивностей <FONT face=Symbol size=2>l</FONT> и 
+            <FONT face=Symbol size=2>m</FONT> , т.е.. </P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>rho:=lambda/mu;</FONT></B> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n30.gif"> </P>
+            <P align=left>4) Вычислим финальные вероятности системы: </P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>N:=4:P[0]:=(1-rho)/(1-rho^(N+1));P[1]:=rho*P[0];P[2]:=rho^2*P[0];P[3]:=rho^3*P[0];P[4]:=rho^4*P[0];</FONT></B> 
+            </P>
+            <P align=center><IMG src="lab3.files/SMO1_n31.gif"> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n32.gif"> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n33.gif"> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n34.gif"> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n35.gif"> </P>
+            <P align=left>5) Вероятность отказа в обслуживании автомобиля:: </P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>P[otk]:=P[4];</FONT></B> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n36.gif"> </P>
+            <P align=left>Отсюда следует, что пост диагностики не обслуживает 
+            автомобили в среднем в 15.8% случаев.<BR>6) Относительная пропускная 
+            способность поста диагностики: </P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>q:=1-P[otk];</FONT></B> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n37.gif"> </P>
+            <P align=left>7) Абсолютная пропускная способность поста диагностики 
+            (автомобиля в час): </P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>A:=lambda*q;</FONT></B> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n38.gif"> </P>
+            <P align=left>8) Среднее число автомобилей в СМО: </P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>L[s]:=rho*(1-(N+1)*rho^N+N*rho^(N+1))/((1-rho)*(1-rho^(N+1)));</FONT></B> 
+            </P>
+            <P align=center><IMG src="lab3.files/SMO1_n39.gif"> </P>
+            <P align=left>9) Среднее время пребывания автомобиля в СМО: </P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>W[s]:=L[s]/(lambda*(1-P[N]));</FONT></B> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n40.gif"> </P>
+            <P align=left>10) Средняя продолжительность пребывания заявки в 
+            очереди на обслуживание: </P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>W['q']:=W[s]-1/mu;</FONT></B> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n41.gif"> </P>
+            <P align=left>11) Среднее число заявок в очереди (длина очереди): 
+            </P>
+            <P align=left><TT>&gt; </TT><B><FONT 
+            color=#ff0000>L['q']:=lambda*(1-P[N])*W['q'];</FONT></B> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n42.gif"> </P>
+            <P align=left>Для статистического моделирования работы поста 
+            диагностики составим следующую процедуру: </P>
+            <P align=left><TT>&gt; </TT><B><FONT color=#ff0000>p:=proc(k) global 
+            t_och1,t_och2,t_och3,sm_t_obs,post,otk,obsl:local 
+            t1,t_okon,t,rn_post,och,per:<BR>t_och1:=0:t_och2:=0:t_och3:=0:post:=0:otk:=0:obsl:=0:t_okon:=0:sm_t_obs:=0:och:=0:rn_post:=rand(1..1200):<BR>for 
+            t from 1 by 1 to k do<BR>t1:=rn_post():<BR>if och=1 then 
+            t_och1:=t_och1+1 fi:<BR>if och=2 then t_och2:=t_och2+1 fi:<BR>if 
+            och=3 then t_och3:=t_och3+1 fi: <BR>if t1&gt;=1 and t1&lt;=17 and 
+            t_okon=0 and och&gt;=0 and och&lt;=3 then per:=1 fi:<BR>if t1&gt;=1 
+            and t1&lt;=17 and t_okon&gt;0 and och&gt;=0 and och&lt;3 then per:=2 
+            fi:<BR>if t1&gt;=1 and t1&lt;=17 and t_okon&gt;0 and och=3 then 
+            per:=3 fi:<BR>if t1&gt;17 and t_okon&gt;0 then per:=4 fi:<BR>if 
+            t1&gt;17 and t_okon=0 and och&gt;0 then per:=5 fi:<BR>if per=1 then 
+            t_okon:=stats[random,poisson[65]](): 
+            sm_t_obs:=sm_t_obs+t_okon:obsl:=obsl+1:post:=post+1 fi:<BR>if per=2 
+            then t_okon:=t_okon-1:obsl:=obsl+1:och:=och+1:post:=post+1 fi:<BR>if 
+            per=3 then t_okon:=t_okon-1:otk:=otk+1:post:=post+1 fi:<BR>if per=4 
+            then t_okon:=t_okon-1 fi:<BR>if per=5 then 
+            t_okon:=stats[random,poisson[65]](): 
+            sm_t_obs:=sm_t_obs+t_okon:och:=och-1 fi od end:</FONT></B> </P>
+            <P align=left>Принятые обозначения:<BR>t_och1,t_och2,t_och3 - 
+            количество минут, когда в очереди 1, 2 и 3 машины 
+            соответственно;&nbsp;<BR>sm_t_obs - затрачено всего минут на 
+            обслуживание;<BR>post - прибыло машин на обслуживание; otk - 
+            количество отказов в обслуживании; obsl - обслужено машин;<BR>t_obsl 
+            - продолжительность обслуживания машины, инициализируется как 
+            случайная величина, распределенная по закону Пуассона с 
+            математическим ожиданием 65 минут (1 час 5 минут);<BR>t1 - случайная 
+            величина, с одинаковой вероятностью принимающая целые значения из 
+            интервала от 1 до 12000. Если t1&gt;=0 и t1&lt;=17, то считаем, что 
+            на пункт диагностики поступила заявка (интенсивность 0.85 заявки в 
+            час = 17/12000 заявки в минуту);<BR>t - параметр цикла (количество 
+            минут).<BR>Проведем опыт продолжительностью в 5000 
+            минут:<BR><TT>&gt; </TT><B><FONT 
+            color=#ff0000>p(5000);print("Поступило на обслуживание 
+            автомобилей&nbsp; ",post);print("Обслужено&nbsp; ",obsl); 
+            print("Отказано в обслуживании ",otk); print("Затрачено на 
+            обслуживание ",sm_t_obs,"мин."); print(t_och1," мин. 1 машина в 
+            очереди");print(t_och2,"мин. 2 машины в очереди"); print(t_och3," 
+            мин. 3 машины в очереди");</FONT></B> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n43.gif"> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n44.gif"> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n45.gif"> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n46.gif"> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n47.gif"> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n48.gif"> </P>
+            <P align=center><IMG src="lab3.files/SMO1_n49.gif"> </P>
+            <P align=left>Повторите опыт 50 раз в цикле, найдите оценки 
+            характеристик СМО, сравните их с теоретическими значениями.&nbsp; 
+            </P>
+            <P align=left><B>Задача 2</B>:<BR>1) Модифицируйте процедуру для 
+            вычисления числовых характеристик СМО. Задайте продолжительность 
+            опыта в 1000 минут и повторите опыт, например, 5 раз. Затем 
+            вычислите средние значения каждой характеристики СМО. Сравните 
+            опытные данные с вероятностными характеристиками СМО.<BR>2) 
+            Смоделируйте работу СМО для случая, когда автомобиль обслуживается 
+            ровно 1 час 5 минут, а все остальные параметры остаются прежними. 
+            Сравните полученные данные с результатами предыдущего пункта.<BR>3) 
+            Так как интенсивность поступления заявок равна 0.85 машины в час, то 
+            в среднем промежуток времени между поступлениями заявок составляет 
+            1/0.85=100/85 часа, или около 71 минуты. Задайте интервал между 
+            поступлениями заявок с помощью функции stats[random, poisson[71]]() 
+            и проведите ряд испытаний работы СМО. Сравните средние значения 
+            характеристик, полученных опытным путем, с вероятностными 
+            характеристиками.<BR>4) Задайте интенсивность обслуживания в 70 
+            минут, а число стоянок для машин равной 4, и проведите испытания 
+            работы поста диагностики. Повторите опыт для случая, когда 
+            интенсивность обслуживания составляет 60 минут, а число стоянок 2. 
+            Как изменятся характеристики поста диагностики?<BR>5) Смоделируйте 
+            работу поста диагностики при условии, что число стоянок не 
+            ограниченно.<BR></P>
+            <P align=right><A 
+            href="http://www.exponenta.ru/educat/systemat/gomboev/labsmo/lr.asp">В 
+            начало</A></P>
+            <P align=right><A 
+            href="http://www.exponenta.ru/educat/systemat/systemat.asp">Вернуться</A> 
+            на страницу &lt;Методические 
+      разработки&gt;</P></TD></TR></TBODY></TABLE></CENTER></DIV></TD></TR></TBODY></TABLE></CENTER></DIV>
+<CENTER>
+<TABLE bgColor=white border=0 cellPadding=0 cellSpacing=0 width=740>
+  <TBODY>
+  <TR>
+    <TD align=middle height=30 vAlign=bottom width=740><A class=blackbold 
+      href="http://www.exponenta.ru/map.asp">Карта сайта</A> |<A class=blackbold 
+      href="http://www.exponenta.ru/default.asp"> На первую страницу</A> |<A 
+      class=blackbold href="http://www.exponenta.ru/search/"> Поиск</A> |<A 
+      class=blackbold href="http://www.exponenta.ru/connect/project.asp">О 
+      проекте</A> |<A class=blackbold 
+      href="http://www.exponenta.ru/connect/collabor.asp">Сотрудничество</A> <!-- |<a href="http://www.exponenta.ru/connect/connect.asp" class="blackbold">Обратная связь</a> -->|<A 
+      class=blackbold href="mailto:info@exponenta.ru">e-mail</A> </TD></TR>
+  <TR>
+    <TD align=middle vAlign=center width=740><A class=blackbold 
+      href="http://www.exponenta.ru/journal" target=_blank>Exponenta Pro</A> | 
+      <A class=blackbold href="http://www.matlab.ru/" 
+    target=_blank>Matlab.ru</A></TD></TR>
+  <TR>
+    <TD align=middle height=40 vAlign=center width=740>
+      <P align=right><A href="http://www.exponenta.ru/connect/banners.asp"><FONT 
+      style="FONT-SIZE: 8pt">Наши баннеры</FONT></A></P>
+      <HR>
+
+      <P><A 
+      href="http://www.exponenta.ru/educat/news/local_copy/locals.asp"><IMG 
+      alt="О получении локальных копий сайтов" border=0 height=20 
+      src="lab3.files/copii1.gif" width=700></A> </P></TD></TR></TBODY></TABLE>
+<TABLE border=0 width=740>
+  <TBODY>
+  <TR>
+    <TD width="10%">
+      <TABLE border=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD width="56%">
+            <P align=left><FONT size=-2><A 
+            href="http://www.exponenta.ru/connect/copyright.asp">Copyright © 
+            2000-2003. Компания SoftLine. Все права защищены.</A></FONT></P>
+            <P><FONT style="FONT-SIZE: 8pt">Дата последнего обновления 
+            информации на сайте: 25.09.03<BR>Сайт начал работу 01.09.00</FONT> 
+            </P></TD>
+          <TD width="44%">
+            <P align=right><A href="http://www.softline.ru/" target=_blank><IMG 
+            alt=www.softline.ru border=0 height=25 src="lab3.files/sl_logo2.gif" 
+            width=130></A></P></TD></TR></TBODY></TABLE>
+      <P>
+      <DIV align=center><A href="http://www.exponenta.ru/journal/"><IMG 
+      alt="Льготная подписка на научно-практический журнал Exponentа Pro" 
+      border=0 height=60 src="lab3.files/1508_2003_468x60.gif" width=468></A> 
+      </DIV>
+      <P></P>
+      <P>&nbsp;</P>
+      <DIV align=center>
+      <P><!-- HotLog -->
+      <SCRIPT language=javascript>
+hotlog_js="1.0";
+hotlog_r=""+Math.random()+"&s=57742&im=32&r="+escape(document.referrer)+"&pg="+
+escape(window.location.href);
+document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+</SCRIPT>
+
+      <SCRIPT language=javascript1.1>
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")</SCRIPT>
+
+      <SCRIPT language=javascript1.2>
+hotlog_js="1.2";
+hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+(((navigator.appName.substring(0,3)=="Mic"))?
+screen.colorDepth:screen.pixelDepth)</SCRIPT>
+
+      <SCRIPT language=javascript1.3>hotlog_js="1.3"</SCRIPT>
+
+      <SCRIPT language=javascript>hotlog_r+="&js="+hotlog_js;
+document.write("<a href='http://click.hotlog.ru/?57742' target='_top'><img "+
+" src='http://hit4.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</SCRIPT>
+      <NOSCRIPT><A href="http://click.hotlog.ru/?57742" target=_top><IMG 
+      alt=HotLog border=0 height=31 src="lab3.files/count.gif" 
+      width=88></A></NOSCRIPT> 
+      <!-- /HotLog --><!--Rating@Mail.ru COUNTER-->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <SCRIPT language=JavaScript><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT language=JavaScript><!--
+d.write('<a href="http://top.mail.ru/jump?from=96686"'+
+' target=_top><img src="http://top.list.ru/counter'+
+'?id=96686;t=239;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=88></a>')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+       <NOSCRIPT><A href="http://top.mail.ru/jump?from=96686" target=_top><IMG 
+      alt=Рейтинг@Mail.ru border=0 height=31 
+      src="C:\Мои документы\lab3.files\empty(1).gif" width=88></A></NOSCRIPT>
+      <SCRIPT language=JavaScript><!--
+if(js>11)d.write('--'+'>')//--></SCRIPT>
+<!--/COUNTER--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <!--begin of Top100 logo--><A href="http://top100.rambler.ru/top100/"><IMG 
+      alt="Rambler's Top100" border=0 height=31 
+      src="C:\Мои документы\lab3.files\empty(2).gif" width=88></A> <!--end of Top100 logo --></P></DIV></TD></TR></TBODY></TABLE></CENTER></BODY></HTML>

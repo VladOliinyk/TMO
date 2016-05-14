@@ -1,0 +1,93 @@
+BODY {
+	BACKGROUND-COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica; FONT-SIZE: 8pt
+}
+FORM {
+	FONT-SIZE: 8pt; MARGIN: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+SELECT {
+	FONT-SIZE: 8pt; WIDTH: 200px
+}
+INPUT {
+	COLOR: #4271bd; FONT-SIZE: 8pt; FONT-WEIGHT: normal; HEIGHT: 20px
+}
+UL {
+	FONT-SIZE: 8pt; MARGIN: 0px; PADDING-BOTTOM: 0px; PADDING-LEFT: 30px; PADDING-TOP: 0px
+}
+H2 {
+	FONT-FAMILY: Verdana, Arial, Helvetica; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+TD {
+	FONT-FAMILY: Verdana, Arial, Helvetica; FONT-SIZE: 8pt
+}
+h {
+	BACKGROUND-COLOR: #d6df20
+}
+A {
+	COLOR: #4271bd; FONT-FAMILY: Verdana, Arial, Helvetica; FONT-SIZE: 8pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ae5e5e
+}
+A.anormal {
+	COLOR: #871a14
+}
+A.anormal:hover {
+	COLOR: #e4c032
+}
+A.navbar {
+	COLOR: #ffffff
+}
+A.navbar:hover {
+	COLOR: #ffff00
+}
+A.text1 {
+	COLOR: #871a14
+}
+P {
+	FONT-FAMILY: Verdana, Arial, Helvetica; FONT-SIZE: 8pt; MARGIN: 0px
+}
+.text1 {
+	BACKGROUND-COLOR: #ffffff; COLOR: #000000
+}
+.page {
+	COLOR: #714042
+}
+.head {
+	BACKGROUND-COLOR: #f1e7e4; COLOR: #933131; FONT-FAMILY: Verdana, Arial, Helvetica; FONT-SIZE: 10pt; FONT-WEIGHT: normal; TEXT-ALIGN: left
+}
+.headforum {
+	BACKGROUND-COLOR: #ffcc66; COLOR: #933131; FONT-FAMILY: Verdana, Arial, Helvetica; FONT-SIZE: 10pt; FONT-WEIGHT: normal; TEXT-ALIGN: left
+}
+.redbold {
+	COLOR: #9a4e4e; FONT-FAMILY: Verdana, Arial, Helvetica; FONT-WEIGHT: bold
+}
+.bluenormal {
+	COLOR: #4271bd; FONT-SIZE: 10pt; FONT-WEIGHT: normal
+}
+.blacknormal {
+	COLOR: #000000; FONT-SIZE: 8pt; FONT-WEIGHT: normal
+}
+.blackbold {
+	COLOR: #000000; FONT-WEIGHT: normal
+}
+.paddingleft10 {
+	PADDING-LEFT: 10px
+}
+.right {
+	BACKGROUND-COLOR: #ab5858
+}
+.left {
+	BACKGROUND-COLOR: #f1e7e4; TEXT-ALIGN: justify
+}
+.left1 {
+	BACKGROUND-COLOR: #fefcfc
+}
+.leftwhite {
+	BACKGROUND-COLOR: #ffffff
+}
+.lefthead {
+	BACKGROUND-COLOR: #f1e7e4; COLOR: #933131
+}
+.def {
+	FONT-STYLE: italic; FONT-WEIGHT: bold
+}
